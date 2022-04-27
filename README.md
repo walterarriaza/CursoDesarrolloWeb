@@ -3,6 +3,6 @@ En este repositorio se almacenará el material que se utilizará en **Curso de D
 
 
 ## Índice de curso
-- HTML
+- [HTML](https://github.com/andreiDev1/CursoDesarrolloWeb/tree/main/00-CursoHTML)
 
 
