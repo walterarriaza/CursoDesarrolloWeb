@@ -5,47 +5,36 @@ información para realizar la indexación correcta del Sitio Web en los motores 
 Si se quisiera diseñar un sitio Web para un sitio Web con características (palabras, frases, modismos,etc. ) muy particualares de un país,
 se puede hacer más específico el lenguaje. Ej: lang="es-GT", donde además del código del lenguaje "es" se indica el dominio que representa
 a ese país. Para el caso de Guatemala, el dominio es "GT". Pero esto no es normalmente recomendable, salvo que se necesiten características específicas y
-enfocadas a un país en particular.
-
-Es un formato de codificación de caracteres Unicode e ISO 10646 que utiliza símbolos de longitud variable. 
-
-Cuando se trabaja con navegadores antiguos, es probable que se generé error al desplegar algunos símbolos o letras especiales, si esa fuera el caso, 
-a continuación se muestra el vínculo con los códigos para generar caracteres especiales en HTML:
-    https://desarrolloweb.com/articulos/11.php
+enfocadas a un país en particular. -->
 
 
--->
 <head>
-    <meta charset="UTF-8"> <!-- Conjunto de caracteres de la página Web(char set) -->
-    <!-- Esta etiqueta no es parte de las etiquetas básicas de HTML, como se está trbajando con Visual Studio Code, cuyo propiedad es de Microsoft,
-        esta etiqueta mejora la compatibilidad entre el sitio Web y el navegador "edge" o el antiguo "Internet Explirer". 
-        Sin embargo, no es una etiqueta necesaria, así que no se agregará al sitio Web.
-            <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    -->
+    <meta charset="UTF-8"> <!-- Conjunto de caracteres de la página Web(char set). Este es el conjunto de caracteres más completo. Permite
+    que los símbolos especiales como las "ñ", las dildes, diéresis, acento circunflejo, grave, etc., se muestre correctamente en el sitio Web. -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- El "viewport" es la zona visible del navegador, es decir, el área donde se renderiza
     el contenido del sitio Web dentro del navegador. Esta etiqueta le indica al navegador de qué manera se adaptará el contenido del sitio Web al tamaño
     del dispositivo. 
     
     "width=device-width"   ->  Indica que el ancho del "viewport" será igual al ancho del dispositivo en el cual se abra el sitio Web.
     "initial-scale=1.0"  ->  Indica a qué escala se abrirá el contenido, siempre se abrirá a la escala original "initial-scale=1.0".
-    -->
-    <title>Aprendiendo HTML</title> <!-- Es recomendable que el título tenga entre 55 y 65 caracteres. Esto se debe a que tanto el título
-    como la descripción de la etiqueta meta name="description" son las que se muestran en el buscador de Google. Cuando la cantidad máxima de caracteres
-    recomendada se supera, eso provocará que los resultados de las búsquedas de Google que correspondan a la página, muestren incompletos el título y la descripción,
-    mostrando puntos suspensivos para indicar que hay más texto ya sea en el título o en la descripción, pero que no cabe en el espacio que Google asigna
-    para mostrar la información de la página.
-    -->
-     <meta name="description" content="Página de ejemplo del curso de HTML"/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
-     <!-- Es recomendable que cada página de nuestro sitio Web tenga un título y una decripción diferentes, pues esto ayuda a mejorar su posicionamiento. -->
 
-     <!-- La Tabla Periódica de HTML es una tabla con todas las etiquetas HTML agrupadas por colores, e identificando a qué tipo de etiqueta corresponde cada una.
-        https://joshduck.com/periodic-table.html
-        https://ryanhayes.net/periodic-table-of-the-html-5-elements/
+    Esta etiqueta permite que el sitio Web sea responsive(adaptable a diferentes tamaños de pantalla).
     -->
+    <title>Aprendiendo HTML</title> <!-- Es recomendable que el título tenga como máximo 55 o 65 caracteres. Esto se debe a que tanto el título
+        como la descripción de la etiqueta meta name="description" son las que se muestran en el buscador de Google. Cuando la cantidad máxima de caracteres
+        recomendada se supera, eso provocará que los resultados de las búsquedas de Google que correspondan a la página, muestren incompletos el título y la descripción,
+        mostrando puntos suspensivos para indicar que hay más texto, pero que no cabe en el espacio que Google asigna
+        para mostrar la información de la página.
+        -->
+     <meta name="description" content="Página de ejemplo del curso de HTML."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+     
+
+    
 
     <style> /* La etiqueta "styles" permite incluir CSS dentro de la misma página Web. */
         h2{
-            color: #ff4500; /* El código hexadecimale está formado por letras de la A la F y por números del 0 al 9. */
+            color: #ff4500; /* El código hexadecimal está formado por letras de la A la F y por números del 0 al 9. */
         }
     </style>
 
@@ -53,17 +42,11 @@ a continuación se muestra el vínculo con los códigos para generar caracteres 
 </head>
 
 <body>
-    <p id="inicio">Aprendiendo HTML</p> <!-- El atributo "id" que se agregó, se utilizará en la sección de "vínculos", y es el que permitirá
-    redireccionar cada uno de los vínculos internos que se crearán dentro del "Temario del Curso" que se agregó en esa sección, a cada uno de los
-    títulos respectivos. 
-    
-    IMPORTANTE: En anteriores versiones de HTML el atributo utilizado para identificar cada elemento de destino del hipervínculo era el atributo "name", sin embargo, 
-    dicho atributo ya no es reconocido por los navegadores más recientes, por eso su uso no es recomendado. En su lugar, en HTML5 se utiliza
-    el atributo "id". -->
+    <p>Aprendiendo HTML</p> 
     
     <hr> <!-- La etiqueta "hr" crea una línea separatoria entre diferentes contenidos de la página, pero su utilidad principal
     es que crea un "salto semántico" dentro del sitio Web; es decir, que separa un tema de otro tema dentro de la página Web.-->
-    <h2 id="encabezados">Encabezados HTML</h2>
+    <h2>Encabezados HTML</h2>
 
     <h1>Encabezado de nivel 1 - Solo puede haber una etiqueta "h1" por documento.</h1>
     <!-- IMPORTANTE: Para ayudar con el posicionamiento del sitio Web(SEO) se indispensable que SOLAMENTE EXISTA UNA ETIQUETA "h1" por cada página
@@ -79,7 +62,7 @@ a continuación se muestra el vínculo con los códigos para generar caracteres 
    
     <hr>
 
-    <h2 id="texto-basico">Etiquetas de Texto Básicas</h2>
+    <h2>Etiquetas de Texto Básicas</h2>
 
     <!-- El plugin "Emmet" permite generar texto falso automáticamente. Basta con escribir la palabra "lorem" y presionar "tab". -->
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim soluta officiis dignissimos ratione laboriosam, voluptate amet accusantium repellat sit, 
@@ -101,7 +84,7 @@ a continuación se muestra el vínculo con los códigos para generar caracteres 
    
 
     <hr>
-    <h2 id="texto-semantico">Etiquetas de Texto Semánticas</h2>
+    <h2>Etiquetas de Texto Semánticas</h2>
     <p>
         <strong>Texto importante.</strong> <!-- Texto destacado o de gran importancia en negrita.-->
         <em>Este texto tiene énfasis.</em> <!-- Este texto tiene asignado un énfasis.-->
@@ -112,7 +95,7 @@ a continuación se muestra el vínculo con los códigos para generar caracteres 
     
     <hr> 
 
-    <h2 id="etiqueta-salto-linea">Etiquetas de Salto de Línea</h2>
+    <h2>Etiquetas de Salto de Línea</h2>
     
     <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br/> Sunt impedit ab itaque. <br/> Soluta sapiente architecto, consectetur perferendis ad saepe eveniet 
@@ -122,6 +105,7 @@ a continuación se muestra el vínculo con los códigos para generar caracteres 
     
 
     <hr>
+
     <h2>Etiquetas de Formateo</h2>
     <p>
         <pre> <!-- Este es un texto preformateado. Se mostrará tal cual se escribió en el editor en HTML, respetando los espacios y tabulaciones.-->
@@ -155,6 +139,11 @@ a continuación se muestra el vínculo con los códigos para generar caracteres 
                         " (comilla doble) &quot;
                         © (copyright) &copy;
                         ® (marca registrada) &reg;
+                    
+                    Cuando se trabaja con navegadores antiguos, es probable que se generé error al desplegar algunos símbolos o letras especiales, si esa fuera el caso, 
+                    a continuación se muestra el vínculo con los códigos para generar caracteres especiales en HTML:
+                        https://desarrolloweb.com/articulos/11.php   
+                        
                     -->
                     &lt;html&gt;
                       &lt;head&gt;
@@ -171,7 +160,7 @@ a continuación se muestra el vínculo con los códigos para generar caracteres 
     
 
     <hr>
-    <h2 id="semanticas-estructurales">Etiquetas Semánticas Estructurales</h2>
+    <h2>Etiquetas Semánticas Estructurales</h2>
     
     <div>Es una etiqueta contenedora que no tiene semántica.</div>
     
