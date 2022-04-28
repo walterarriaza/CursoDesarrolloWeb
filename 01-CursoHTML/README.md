@@ -8,5 +8,5 @@ En este curso se aborda el **Lenguaje de Marcas de Hipertexto**, también llamad
 
 # Clases
 
-- [**Encabezados HTML- Etiquetas de texto básicas - Etiquetas de texto semánticas - Etiquetas de salto de línea - Etiquetas de formateo - Etiquetas semánticas estructurales**](https://github.com/andreiDev1/CursoDesarrolloWeb/tree/main/00-CursoHTML/Clase1)
+- [**Clase 1: Encabezados HTML, Etiquetas de texto básicas, Etiquetas de texto semánticas, Etiquetas de salto de línea, Etiquetas de formateo, Etiquetas semánticas estructurales**](https://github.com/andreiDev1/CursoDesarrolloWeb/tree/main/00-CursoHTML/Clase1)
 
