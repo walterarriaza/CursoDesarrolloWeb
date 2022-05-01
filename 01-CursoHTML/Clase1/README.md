@@ -15,6 +15,6 @@
 
 > Diseñe un sitio Web como el que se muestra a continuación:
 > 
-> ![Historia HTML](https://imgur.com/0dy7IEU)
+> ![Historia HTML](https://i.imgur.com/0dy7IEU.png)
 
 ---
