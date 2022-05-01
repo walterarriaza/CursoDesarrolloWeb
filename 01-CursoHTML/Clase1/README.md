@@ -4,7 +4,7 @@
 > 
 > Ejemplo:
 > 
-> ![Receta](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase1/img/receta.png)
+> ![Receta](https://i.imgur.com/mkf80NE.png)
 > 
 > **_No olvide indicar el nombre del autor del sitio Web._**
 
