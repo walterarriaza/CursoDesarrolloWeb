@@ -15,6 +15,6 @@
 
 > Diseñe un sitio Web como el que se muestra a continuación:
 > 
-> ![Historia HTML](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase1/img/historiaHTML.png)
+> ![Historia HTML](https://imgur.com/0dy7IEU)
 
 ---
