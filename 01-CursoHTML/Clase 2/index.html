@@ -1,0 +1,66 @@
+
+<!DOCTYPE html> <!-- Indica la versión de lenguaje de marcado HTML con la que se está trabajando. -->
+<html lang="es"> <!-- Se define el lenguaje que se utilizará en el Sitio Web. El agoritmo de Google utiliza esta
+información para realizar la indexación correcta del Sitio Web en los motores de búsqueda, provocando un impacto positivo en el CEO.
+Si se quisiera diseñar un sitio Web para un sitio Web con características (palabras, frases, modismos,etc. ) muy particualares de un país,
+se puede hacer más específico el lenguaje. Ej: lang="es-GT", donde además del código del lenguaje "es" se indica el dominio que representa
+a ese país. Para el caso de Guatemala, el dominio es "GT". Pero esto no es normalmente recomendable, salvo que se necesiten características específicas y
+enfocadas a un país en particular. -->
+
+
+<head>
+    <meta charset="UTF-8"> <!-- Conjunto de caracteres de la página Web(char set). Este es el conjunto de caracteres más completo. Permite
+    que los símbolos especiales como las "ñ", las dildes, diéresis, acento circunflejo, grave, etc., se muestre correctamente en el sitio Web. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- El "viewport" es la zona visible del navegador, es decir, el área donde se renderiza
+    el contenido del sitio Web dentro del navegador. Esta etiqueta le indica al navegador de qué manera se adaptará el contenido del sitio Web al tamaño
+    del dispositivo. 
+    
+    "width=device-width"   ->  Indica que el ancho del "viewport" será igual al ancho del dispositivo en el cual se abra el sitio Web.
+    "initial-scale=1.0"  ->  Indica a qué escala se abrirá el contenido, siempre se abrirá a la escala original "initial-scale=1.0".
+
+    Esta etiqueta permite que el sitio Web sea responsive(adaptable a diferentes tamaños de pantalla).
+    -->
+    <title>Aprendiendo HTML - Clase 2</title> <!-- Es recomendable que el título tenga como máximo 55 o 65 caracteres. Esto se debe a que tanto el título
+        como la descripción de la etiqueta meta name="description" son las que se muestran en el buscador de Google. Cuando la cantidad máxima de caracteres
+        recomendada se supera, eso provocará que los resultados de las búsquedas de Google que correspondan a la página, muestren incompletos el título y la descripción,
+        mostrando puntos suspensivos para indicar que hay más texto, pero que no cabe en el espacio que Google asigna
+        para mostrar la información de la página.
+        -->
+     <meta name="description" content="Página de ejemplo del curso de HTML."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+     
+
+    
+
+    <style> /* La etiqueta "styles" permite incluir CSS dentro de la misma página Web. */
+        h2{
+            color: #ff4500; /* El código hexadecimal está formado por letras de la A la F y por números del 0 al 9. */
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <h2 id="etiquetas-block-inline">Etiquetas Block (de bloque) VS Inline (de línea)</h2>
+    <div style="background-color: yellow;"> Una etiqueta de bloque es aquella que genera saltos de línea. Ocupa todo el ancho disponible.
+          La etiqueta de bloque (Block) por excelencia, es la etiqueta &lt;div&gt;. Es un contenedor de bloque genérico.
+    </div>
+    <span style="background-color: orange;">Una etiqueta de línea únicamente ocupa el espacio necesario. Solamente ocupa el ancho necesario.
+        La etiqueta de línea (InLine) por excelencia, es la etiqueta &lt;span&gt;. Es un contenedor de línea genérico.
+    </span>
+    <span>Segunda etiqueta "span", como es una etiqueta InLine(de línea), este texto quedará justo después del texto anterior, sin dejar salto de línea.</span>
+    
+    
+
+    <hr>
+
+    <h2 id="estilos-css">Estilos CSS en HTML</h2>
+    <span style="color:blueviolet;">Estilos CSS incrustados dentro de HTML con el atributo "style".</span>
+    
+   <hr>
+    
+    <aside> - Contenido publicitario o Contenido Complementario del contenido principal. -</aside> <!--Publicidad de la página-->
+    <footer>Creada por: ______</footer> <!--Pie de página-->
+</body>
+</html>
