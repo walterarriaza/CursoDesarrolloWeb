@@ -4,7 +4,7 @@
 > 
 > Ejemplo:
 > 
-> ![Receta](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase1/img/receta.png)
+> ![Receta](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase%201/img/receta.png)
 > 
 > **_No olvide indicar el nombre del autor del sitio Web._**
 
@@ -15,6 +15,6 @@
 
 > Diseñe un sitio Web como el que se muestra a continuación:
 > 
-> ![Historia HTML](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase1/img/historiaHTML.png)
+> ![Historia HTML](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase%201/img/historiaHTML.png)
 
 ---
