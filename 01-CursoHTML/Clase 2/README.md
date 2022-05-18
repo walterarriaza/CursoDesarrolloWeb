@@ -2,8 +2,8 @@
 
 Diseñe un Sitio Web donde cree las siguientes listas (utilice diferentes estilos de lista):
   - 20 países de Europa (Lista ordenada descendentemente)
-  - Departamento existentes en la empresa **Plastikito** (Lista desordenada)
-  - 15 productos fabricados por la empresa **Plastikito** (lista ordenada)
+  - Departamentos existentes en la empresa **Plastikito** (Lista desordenada)
+  - 10 de sus modelos de vehículos preferidos (lista ordenada)
   - 5 Smartphones lanzados este año (Lista desordenada)
   - Una lista de definición donde se enumeren 15 etiquetas HTML y se explique la función de cada una.
 
