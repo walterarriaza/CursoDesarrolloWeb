@@ -58,7 +58,75 @@ enfocadas a un país en particular. -->
     <h2 id="estilos-css">Estilos CSS en HTML</h2>
     <span style="color:blueviolet;">Estilos CSS incrustados dentro de HTML con el atributo "style".</span>
     
-   <hr>
+    <br>
+    
+    <hr>
+
+    <br>
+      
+    <h2>Imágenes</h2>
+    <img src="img/html-periodic-table.jpg" alt="Tabla Periódica de los elementos HTML"/> <!-- El atributo "alt" es para el texto alternativo. Permite agregar un texto que describa a la imagen, especialmente útil
+    para las personas con discapacidad, pues si a una computadora se le configura la accesibilidad para personas no videntes, el texto que se encuentre
+    dentro de "alt" será reproducido para que la persona pueda escuchar y entender de forma general de qué trata la imagen. Además, dicho texto alternativo
+    se mostrará si la imagen por alguna razón no cargara correctamente. También es un factor importante en el SEO(Search Engine Optimization - Optimización de Motores de Búsqueda), 
+    es decir, en el posicionamiento del sitio en la Web. -->
+    
+    <!-- La etiqueta "img" permite utilizar los atributos "width" y "height" para asignar el ancho y alto de la imagen, sin embargo,
+        idealmente el ancho y alto de la imagen deben definirse por medio de CSS. En este ejemplo, en la hoja externa de CSS(styles.css) se asignó
+        la altura y el ancho máximo de la imagen.
+    -->
+    <img src="img/programmer.png" alt="Ilustración de una persona programando."/> 
+    <img src="img/funnyProgrammer.gif" alt="Ilustración de una persona girando en una silla."/> 
+    <img src="img/wolf.svg" alt="Ilustración de un lobo."/> <!-- Esta imagen abarca todo el ancho de la pantalla del dispositivo, y la altura es bastante grande
+        porque guarda la proporción original entre ancho y altura. Si se desera reducir la altura, se podría modificar la propiedad "height" de la regla "img" en CSS.)-->
+    
+
+    <hr>
+
+    <h2>SVG (Scalable Vector Graphics) </h2>
+    <!-- Si un véctor (SVG) se abriera dentro de un editor de código, como, por ejemplo: Visual Studio Code, 
+        se comprobaría que está constituío por etiquetas y códigos de los diferentes trazos que conforman la imagen
+        vectorial. 
+        Si se copia TODO EL CÓDIGO que conforma una imagen vectorial (SVG) y se agrega en alguna parte de la página Web, 
+        dicho código mostrará la imagen SVG corespondiente.
+    -->
+
+   
+
+    
+    <img src="img/lion.svg" alt="Imagen de un león."/>
+    
+    
+
+    <hr>
+
+    <h2>Figuras</h2> 
+
+    <figure><!-- La etiqueta "figure" es una etiqueta semántica que se utiliza para mostrar un contenido que por sí solo se explica. Lleva dentro
+                 de ella la etiqueta "figcaption" la cual permite asignarle un subtítulo a nuestra imagen, es decir, un texto que se mostrará
+                 al pie de la imagen.
+
+                 Regularmente, dicho contenido es una imagen, pero también puede ser un video, etc.
+            -->
+        <img src="img/html-periodic-table.png" alt="Tabla Periódica de los Elementos HTML">
+        <figcaption>Tabla de los Elementos HTML</figcaption>
+    </figure>
+
+    
+    
+    <hr>
+
+ 
+
+    <h2>Listas Ordenadas</h2>
+    <h3>Estaciones del Año</h3>
+    <ol>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+    </ol>
+
     
     <aside> - Contenido publicitario o Contenido Complementario del contenido principal. -</aside> <!--Publicidad de la página-->
     <footer>Creada por: ______</footer> <!--Pie de página-->
