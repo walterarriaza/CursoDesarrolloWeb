@@ -1,0 +1,239 @@
+
+<!DOCTYPE html> <!-- Indica la versión de lenguaje de marcado HTML con la que se está trabajando. -->
+<html lang="es"> <!-- Se define el lenguaje que se utilizará en el Sitio Web. El agoritmo de Google utiliza esta
+información para realizar la indexación correcta del Sitio Web en los motores de búsqueda, provocando un impacto positivo en el CEO.
+Si se quisiera diseñar un sitio Web para un sitio Web con características (palabras, frases, modismos,etc. ) muy particualares de un país,
+se puede hacer más específico el lenguaje. Ej: lang="es-GT", donde además del código del lenguaje "es" se indica el dominio que representa
+a ese país. Para el caso de Guatemala, el dominio es "GT". Pero esto no es normalmente recomendable, salvo que se necesiten características específicas y
+enfocadas a un país en particular. -->
+
+
+<head>
+    <meta charset="UTF-8"> <!-- Conjunto de caracteres de la página Web(char set). Este es el conjunto de caracteres más completo. Permite
+    que los símbolos especiales como las "ñ", las dildes, diéresis, acento circunflejo, grave, etc., se muestre correctamente en el sitio Web. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- El "viewport" es la zona visible del navegador, es decir, el área donde se renderiza
+    el contenido del sitio Web dentro del navegador. Esta etiqueta le indica al navegador de qué manera se adaptará el contenido del sitio Web al tamaño
+    del dispositivo. 
+    
+    "width=device-width"   ->  Indica que el ancho del "viewport" será igual al ancho del dispositivo en el cual se abra el sitio Web.
+    "initial-scale=1.0"  ->  Indica a qué escala se abrirá el contenido, siempre se abrirá a la escala original "initial-scale=1.0".
+
+    Esta etiqueta permite que el sitio Web sea responsive(adaptable a diferentes tamaños de pantalla).
+    -->
+    <title>Aprendiendo HTML - Clase 3</title> <!-- Es recomendable que el título tenga como máximo 55 o 65 caracteres. Esto se debe a que tanto el título
+        como la descripción de la etiqueta meta name="description" son las que se muestran en el buscador de Google. Cuando la cantidad máxima de caracteres
+        recomendada se supera, eso provocará que los resultados de las búsquedas de Google que correspondan a la página, muestren incompletos el título y la descripción,
+        mostrando puntos suspensivos para indicar que hay más texto, pero que no cabe en el espacio que Google asigna
+        para mostrar la información de la página.
+        -->
+     <meta name="description" content="Página de ejemplo del curso de HTML."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+     
+
+    
+
+    <style> /* La etiqueta "styles" permite incluir CSS dentro de la misma página Web. */
+        h2{
+            color: #ff4500; /* El código hexadecimal está formado por letras de la A la F y por números del 0 al 9. */
+        }
+
+        html {
+               scroll-behavior: smooth;
+        }
+
+    </style>
+
+    
+</head>
+
+<body>
+
+    <!-- ******************* Esta sección pertenece al tema ENLACES INTERNOS que se encuentra más abajo dentro de esta página Web *******************-->
+    
+    <!-- Esta sección se colocó acá por conveniencia, pues así se mostraba el índice del curso al principio, aunque el tema de ENLACES INTERNOS
+    se encuentra mucho más abajo en esta página Web -->
+
+    <h3 id="indice-temas">Temario del Curso</h3>
+    <ul>
+        <li><a href="index.html#tablas">Tablas</a></li> <!-- Cada uno de estos vínculos redireccionará al usuario
+        al elemento que tiene asignado el "id" respectivo. 
+        
+        IMPORTANTE: se antepuso el texto "index.html" para indicar que se quiere acceder al elemento que tenga el id llamado "encabezados", 
+        el cual se encuentra dentro de la página "index.html", esto permitirá inclusive crear un vínculo interno a otra de las página de mi sitio Web 
+        si así lo deseara.  
+            
+
+        IMPORTANTE 2: a cada uno de los títulos principales de esta página de ejemplo, se les agregó el atributo "id",
+        el cual permite que el hipervínculo reconozca hacia qué título debe dirigirse según el título del Temario en el que se de clic.
+          
+        En anteriores versiones de HTML el atributo utilizado para identificar cada elemento de destino del hipervínculo era el atributo "name", sin embargo, 
+        dicho atributo ya no es reconocido por los navegadores más recientes, por eso su uso no es recomendado. En su lugar, en HTML5 se utiliza
+        el atributo "id". -->
+    
+    
+        <li><a href="index.html#enlaces-externos">Enlaces Externos</a></li>
+        <li><a href="index.html#enlaces-internos">Enlaces Internos</a></li>
+        
+        
+        <!-- IMPORTANTE: para que al dar clic en un vínculo del índice, el desplazamiento no sea inmediato, sino que se vea un efecto de desplazamiento más
+        estilizado, se debe agregar en CSS lo siguiente:
+            html {
+               scroll-behavior: smooth;
+            }
+        
+        Esto logrará que al dar clic en un vínculo del índice, la pantalla se desplace gradualmente hacia la posición buscada y no de forma abrupta.
+        -->
+    </ul>
+
+    <!-- ******************* FIN Esta sección pertenece al tema ENLACES INTERNOS que se encuentra más abajo dentro de esta página Web *******************-->
+    
+    <h2 id="tablas">Tablas</h2>
+    
+    <h4>Ejemplo de Tabla Simple:</h4>
+
+    <table>
+        <tr> <!-- La etiqueta "tr" sirve para definir una fila de una tabla. -->
+            <td>Nombre</td>
+            <td>Constelación</td>
+            <td>Tipo</td>
+        </tr>
+        <tr>
+            <td>Ikki</td>
+            <td>Fénix</td>
+            <td>Bronce</td>
+        </tr>
+        <tr>
+            <td>Shaina</td>
+            <td>Ofiuco</td>
+            <td>Plata</td>
+        </tr>
+        <tr>
+            <td>Saga</td>
+            <td>Géminis</td>
+            <td>Dorado</td>
+        </tr>
+    </table>
+
+    
+    <br>
+    <br>   
+
+    <table>
+        <thead> <!-- Área para agregar encabezados de tabla -->
+            <tr>
+                <th colspan="3">-Ejemplo de Tabla Completa-</th> <!-- El atributo "colspan" permite combinar celdas, es decir, definir cuántas columnas de ancho
+                abarcará la celda. Si no se colocara, solamente la primera celda de la tabla tendría en su interior el texto "Ejemplo de Tabla Completa",
+                lo cual provocaría que se desalinearan todos los encabezados. Para evitarlo, el atributo "colspan" define que esta fila
+                abarcará 3 columnas de ancho. -->
+            </tr>
+            <tr>
+                <th>Nombre</th> <!-- Esta etiqueta permite agregar encabezados. -->
+                <th>Constelación</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+
+        <tbody> <!-- Cuerpo de la tabla -->
+            <tr>
+                <td>Ikki</td>
+                <td>Fénix</td>
+                <td>Bronce</td>
+            </tr>
+            <tr>
+                <td>Mistry</td>
+                <td>Lagaro</td>
+                <td>Plata</td>
+            </tr>
+            <tr>
+                <td>Saga</td>
+                <td>Géminis</td>
+                <td>Dorado</td>
+            </tr>
+            <tr>
+                <td>Shaina</td>
+                <td rowspan="2">Ofiuco</td> <!-- El atributo "rowspan" permite combinar celdas, pero en este caso, combina las filas de una tabla. 
+                                             Para este ejemplo, esta celda tendrá dos filas de altura. Esta celda abarcará esta fila, y la siguiente;
+                                             por ello, en la siguiente fila, la celda central no tiene agregado contenido. -->
+                <td>Plata</td>
+            </tr>
+            <tr>
+                <td>Odiseo</td>
+                <!-- <td>Ofiuco</td>--> <!-- Se elimina esta etiqueta, porque en la fila anterior, se definió que la celda
+                de en medio(Oficuo) tendría de altura 2 filas combinadas(rowspan=2), por ello, si se agregara esta etiqueta "td",
+                la tabla se vería desalineada. --> 
+                <td>Dorado</td>
+            </tr>
+        </tbody>
+
+        <tfoot> <!-- Área para agregar pies de página de la tabla -->
+            <tr>
+                <th colspan="3"><small>Saint Seiya fue creado por Masami Kurumada.</small></th> <!-- El atributgo "colspan=3" permite combinar
+                celdas, pero en este caso, combina las columnas de una tabla. Para este ejemplo, esta celda, tendrá 3 columnas de ancho. -->
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Este vínculo servirá para volver al índice de temas, el cual se encuentra identificado con el "id" llamado "inicio". -->
+    <a href="index.html#indice-temas">☝️</a> <!-- El emoji se obtuvo de la página: https://emojipedia.org/ -->
+
+    <hr>
+
+    <h2 id="enlaces-externos">Enlaces Externos</h2>
+    
+    <a href="hola.html">Hacia la página "hola"</a>
+
+    <br>
+    <br>
+    
+    <a href="http://www.gmail.com" target="_blank" rel=""nofollow">Gmail</a> <!-- El atributo "target" permite definir cómo se abrirá el vínculo
+    correspondiente. Sus posibles valores son:
+        _blank  Se abre el vínculo en una nueva pestaña.
+        _self   Se abre el vínculo en la misma pestaña.
+    -->
+
+    <!--
+    IMPORTANTE: El atributo rel="nofollow" está relacionado con el SEO(Search Engine Optimization), y se recomienda su uso
+    cuando el vínculo dentro del cual se implementa, no forma parte de nuestro sitio Web ni está relacionado con el mismo, sino que corresponde a una página Web externa.
+    La razón de incluirlo es que al hacerlo, los bots(arañas) de los motores de búsqueda identificarán que ese enlace no pertenece a nuestro sitio Web, por lo que
+    no deben rastrearlo, evitando así la pérdida de tiempo innecesario en el rastreo de dicho vínculo. 
+
+    NOTA: Si en el sitio Web incluiré links a mis redes sociales, allí NO SE DEBE colocar el atributo rel="nofollow", porque dichas redes sociales sí
+    están relacionadas con mi sitio Web. 
+
+    -->
+    <br>
+    <br>
+    <a href="https://www.google.com" target="_blank">
+        <img src="img/lion.svg" alt="Imágen de un león." width="45" height="45"> <!-- Al utilizar los atributos "width" y "height" desde HTML
+        el número indicado siempre será interpretado en pixeles. -->
+    </a>
+
+    <br>
+    <br>   
+   
+    <!-- Este vínculo servirá para volver al índice de temas, el cual se encuentra identificado con el "id" llamado "inicio". -->
+    <a href="index.html#indice-temas">☝️</a> <!-- El emoji se obtuvo de la página: https://emojipedia.org/ -->
+
+    <hr>
+
+    <h2 id="enlaces-internos">Enlaces Internos</h2>
+    <!-- Código emmet para generar rápidamente la lista:
+         ul>li*18>a
+    -->
+
+    <!-- Este tema se ejemplifica arriba, justo después de la etiqueta "body", donde se creó un índice con vínculos internos con el Temario del Curso. -->
+    
+    <br>
+    <br>
+   
+    <!-- Este vínculo servirá para volver al índice de temas, el cual se encuentra identificado con el "id" llamado "inicio". -->
+    <a href="index.html#indice-temas">☝️</a> <!-- El emoji se obtuvo de la página: https://emojipedia.org/ -->
+    
+    <hr>
+
+    
+    
+    <aside> - Contenido publicitario o Contenido Complementario del contenido principal. -</aside> <!--Publicidad de la página-->
+    <footer>Creada por: ______</footer> <!--Pie de página-->
+</body>
+</html>
