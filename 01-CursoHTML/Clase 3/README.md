@@ -12,7 +12,7 @@ El título de la página Web será **Planetas del sistema solar**.
 
 Diseñe el sitio Web que se muestra en la siguiente imagen, tomando en cuenta los requisitos que se le indican:
 
-![Tarea Enlaces](https://github.com/andreiDev1/CursoDesarrolloWeb-main-/blob/main/01-CursoHTML/Clase%203/img/TareaEnlaces.png)
+![Tarea Enlaces](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase%203/img/TareaEnlaces.png)
 
 
 Además, debe tomar en cuenta los siguientes requisitos:
