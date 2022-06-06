@@ -3,7 +3,7 @@
 Diseñe un sitio Web en el que se muestre la siguiente tabla con el título: **El sistema solar**. 
 El título de la página Web será **Planetas del sistema solar**.
 
-![Tarea Enlaces](https://github.com/andreiDev1/CursoDesarrolloWeb-main-/blob/main/01-CursoHTML/Clase%203/img/ejercicioTablas.png)
+![Tarea Enlaces](https://github.com/andreiDev1/CursoDesarrolloWeb/blob/main/01-CursoHTML/Clase%203/img/ejercicioTablas.png)
 
 
 
