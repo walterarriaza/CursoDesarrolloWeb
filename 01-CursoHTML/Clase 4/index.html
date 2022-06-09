@@ -1,0 +1,132 @@
+
+<!DOCTYPE html> <!-- Indica la versión de lenguaje de marcado HTML con la que se está trabajando. -->
+<html lang="es"> <!-- Se define el lenguaje que se utilizará en el Sitio Web. El agoritmo de Google utiliza esta
+información para realizar la indexación correcta del Sitio Web en los motores de búsqueda, provocando un impacto positivo en el CEO.
+Si se quisiera diseñar un sitio Web para un sitio Web con características (palabras, frases, modismos,etc. ) muy particualares de un país,
+se puede hacer más específico el lenguaje. Ej: lang="es-GT", donde además del código del lenguaje "es" se indica el dominio que representa
+a ese país. Para el caso de Guatemala, el dominio es "GT". Pero esto no es normalmente recomendable, salvo que se necesiten características específicas y
+enfocadas a un país en particular. -->
+
+
+<head>
+    <meta charset="UTF-8"> <!-- Conjunto de caracteres de la página Web(char set). Este es el conjunto de caracteres más completo. Permite
+    que los símbolos especiales como las "ñ", las dildes, diéresis, acento circunflejo, grave, etc., se muestre correctamente en el sitio Web. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- El "viewport" es la zona visible del navegador, es decir, el área donde se renderiza
+    el contenido del sitio Web dentro del navegador. Esta etiqueta le indica al navegador de qué manera se adaptará el contenido del sitio Web al tamaño
+    del dispositivo. 
+    
+    "width=device-width"   ->  Indica que el ancho del "viewport" será igual al ancho del dispositivo en el cual se abra el sitio Web.
+    "initial-scale=1.0"  ->  Indica a qué escala se abrirá el contenido, siempre se abrirá a la escala original "initial-scale=1.0".
+
+    Esta etiqueta permite que el sitio Web sea responsive(adaptable a diferentes tamaños de pantalla).
+    -->
+    <title>Aprendiendo HTML - Clase 4</title> <!-- Es recomendable que el título tenga como máximo 55 o 65 caracteres. Esto se debe a que tanto el título
+        como la descripción de la etiqueta meta name="description" son las que se muestran en el buscador de Google. Cuando la cantidad máxima de caracteres
+        recomendada se supera, eso provocará que los resultados de las búsquedas de Google que correspondan a la página, muestren incompletos el título y la descripción,
+        mostrando puntos suspensivos para indicar que hay más texto, pero que no cabe en el espacio que Google asigna
+        para mostrar la información de la página.
+        -->
+     <meta name="description" content="Página de ejemplo del curso de HTML."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+     
+
+    
+
+    <style> /* La etiqueta "styles" permite incluir CSS dentro de la misma página Web. */
+        h2{
+            color: #ff4500; /* El código hexadecimal está formado por letras de la A la F y por números del 0 al 9. */
+        }
+    </style>
+
+    <!-- Link Hoja Externa de CSS-->
+    <link rel="stylesheet" href="assets/styles.css"> <!-- href = hiper referencia -->
+</head>
+
+<body>
+    <h3 id="indice-temas">Temario del Curso</h3>
+    <ul>
+        <li><a href="index.html#multimedia">Audio y Video</a></li>
+        <li><a href="index.html#iframes">iFrames</a></li>
+        
+        
+        <!-- IMPORTANTE: para que al dar clic en un vínculo del índice, el desplazamiento no sea inmediato, sino que se vea un efecto de desplazamiento más
+        estilizado, se debe agregar en CSS lo siguiente:
+            html {
+               scroll-behavior: smooth;
+            }
+        
+        Esto logrará que al dar clic en un vínculo del índice, la pantalla se desplace gradualmente hacia la posición buscada y no de forma abrupta.
+        -->
+    </ul>
+
+    
+    <br>
+    <br>
+    
+    <hr>
+
+    <br>
+    <h2 id="multimedia">Audio y Video</h2>
+    
+    <br>
+
+    
+    
+    <br>
+    
+    <!-- Agregar el audio con controles-->
+    <audio src="media/Mikis Theodorakis - Zorba the Greek.mp3" controls loop muted preload></audio> <!-- Para que el elemento "audio" sea visible, es
+    indispensable agregar el atributo "controls". Si por alguna razón, no se desease que el archivo de audio fuera visible, simplemente se quita el 
+    atributo "controls" y listo. 
+
+    Hay otros atributos que se podrían agregar a la etiqueta audio: 
+        - autoplay: permite que al cargar el sitio Web, el audio se reproduzca automáticamente. Pero es importante notar que en dispositivos
+                    móviles no se ejecutará nunca la autoreproducción, siempre solicitará dar play para iniciar.
+                    Respecto a los navegadores de escritorio, nuevamente, es muy probable que requiera siempre dar play manualmente, 
+                    pues regularmente se requieren permisos que el usuario proporcione para que un archivo se reproduzca de manera automática. 
+
+
+        - loop: cuando acabe la pista de audio, la repetirá nuevamente de forma indefinida. 
+
+        - muted: silencia de forma predeterminada el audio.
+
+        - preload: permite que al abrirse el sitio Web, automáticamente se comience a cargar el archivo de audio en la memoria caché del navegador, 
+                   aún antes de que el usuario dé clic en el botón "Play". Esto es importante pues evitará que cuando el usuario
+                   reproduzca el audio, este se quede pausado por no haber cargado aún totalmente. s
+    -->
+
+    <br>
+
+
+    <video src="media/French Roast HD.mp4" controls preload poster="img/portada2.jpg"></video>
+    <!-- Acá se podría modificar el tamaño del video con atributos HTML(width y height), pero esto es solo como ejemplo, ya que lo recomendable es
+    hacerlo con CSS. En este caso, en el archivo "styles.css" se agregó la etiqueta "video"  a una regla CSS para que se muestre con el ancho máximo 
+    de la pantalla del dispositivo.  -->
+
+    <!-- Para que el elemento "video" muestre los controles de reproducción, es indispensable agregar el atributo "controls". 
+        
+        IMPORTANTE: el tamaño de la imagen que se agregará como "poster" debe ser exactamente el mismo que el del video, de otra manera, por ejemplo, 
+                    la imagen se verá grande y al reproducir el video este se verá más pequeño, o viceverza.
+    
+        Hay otros atributos que se podrían agregar a la etiqueta video: 
+            - autoplay: permite que al cargar el sitio Web, el video se reproduzca automáticamente. Pero es importante notar que en dispositivos
+                        móviles no se ejecutará nunca la autoreproducción, siempre solicitará dar play para iniciar.
+                        Respecto a los navegadores de escritorio, nuevamente, es muy probable que requiera siempre dar play manualmente, 
+                        pues regularmente se requieren permisos que el usuario proporcione para que un archivo se reproduzca de manera automática. 
+    
+    
+            - loop: cuando acabe el video, la repetirá nuevamente de forma indefinida. 
+    
+            - muted: silencia de forma predeterminada el audio del video.
+    
+            - preload: permite que al abrirse el sitio Web, automáticamente se comience a cargar el archivo de video en la memoria caché del navegador, 
+                       aún antes de que el usuario dé clic en el botón "Play". Esto es importante pues evitará que cuando el usuario
+                       reproduzca el video, este se quede pausado por no haber cargado aún totalmente. s
+
+            - poster="" permite indicar la ubicación de la imagen que servirá como portada o vista en miniatura del video. IMPORTANTE: el tamaño de la imagen
+                        que se agregará como vista en miniatura debe ser exactamente el mismo que el del video, de otra manera, por ejemplo, la imagen se verá grande y al
+                        reproducir el video este se verá más pequeño, o viceverza.
+        -->
+    
+
+    
