@@ -1,0 +1,35 @@
+
+
+html {
+    scroll-behavior: smooth; 
+    /*  IMPORTANTE: para que al dar clic en un vínculo del índice, el desplazamiento no sea inmediato, sino que se vea un efecto de desplazamiento más
+        estilizado, se debe agregar en CSS lo siguiente:
+            html {
+                scroll-behavior: smooth;
+            }
+    
+        Esto logrará que al dar clic en un vínculo del índice, la pantalla se desplace gradualmente hacia la posición buscada y no de forma abrupta.
+    */
+}
+
+
+body {
+    font-family: sant-serif;
+}
+
+h1 {
+    color: navy;
+}
+
+img,video { /* Esta regla permitirá que tanto las imágenes como los videos, se muestre con un ancho que tenga como valor máximo, el ancho de la pantalla del dispositivo. */
+    max-width: 100%; /* max-width se utiliza para que a las imágenes que sean más anchas que el tamaño de la pantalla del dispositivo en el cual se visualizan,
+    se les asigne un ancho máximo que equivale al 100% del ancho de la pantalla del dispositivo. Esto se hace para que las imágenes que sean muy grandes,
+    no sobrepasen el ancho del dispositivo.
+     */
+    height: auto; /* Al definir la altura como "auto", la altura será automáticamente proporcional al ancho de la imagen. */
+}
+
+iframe{
+ width: 80%;
+ height: 400px;   
+}
