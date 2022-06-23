@@ -13,4 +13,5 @@ En este curso se aborda el **Lenguaje de Marcas de Hipertexto**, también llamad
 - [**Clase2:** Etiquetas de Bloque vs Inline, Estilos CSS en HTML, Imágenes, Figuras, Listas ordenadas, Listas desordenadas, Listas de definición](https://github.com/andreiDev1/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%202)
 - [**Clase3:** Tablas, Enlaces externos, Enlaces internos](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%203)
 - [**Clase4:** Audio y Video, iFrames](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%204)
+- [**Clase5:** Formularios](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%205)
 
