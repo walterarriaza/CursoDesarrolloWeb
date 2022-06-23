@@ -1,0 +1,217 @@
+
+<!DOCTYPE html> <!-- Indica la versión de lenguaje de marcado HTML con la que se está trabajando. -->
+<html lang="es"> <!-- Se define el lenguaje que se utilizará en el Sitio Web. El agoritmo de Google utiliza esta
+información para realizar la indexación correcta del Sitio Web en los motores de búsqueda, provocando un impacto positivo en el CEO.
+Si se quisiera diseñar un sitio Web para un sitio Web con características (palabras, frases, modismos,etc. ) muy particualares de un país,
+se puede hacer más específico el lenguaje. Ej: lang="es-GT", donde además del código del lenguaje "es" se indica el dominio que representa
+a ese país. Para el caso de Guatemala, el dominio es "GT". Pero esto no es normalmente recomendable, salvo que se necesiten características específicas y
+enfocadas a un país en particular. -->
+
+
+<head>
+    <meta charset="UTF-8"> <!-- Conjunto de caracteres de la página Web(char set). Este es el conjunto de caracteres más completo. Permite
+    que los símbolos especiales como las "ñ", las dildes, diéresis, acento circunflejo, grave, etc., se muestre correctamente en el sitio Web. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- El "viewport" es la zona visible del navegador, es decir, el área donde se renderiza
+    el contenido del sitio Web dentro del navegador. Esta etiqueta le indica al navegador de qué manera se adaptará el contenido del sitio Web al tamaño
+    del dispositivo. 
+    
+    "width=device-width"   ->  Indica que el ancho del "viewport" será igual al ancho del dispositivo en el cual se abra el sitio Web.
+    "initial-scale=1.0"  ->  Indica a qué escala se abrirá el contenido, siempre se abrirá a la escala original "initial-scale=1.0".
+
+    Esta etiqueta permite que el sitio Web sea responsive(adaptable a diferentes tamaños de pantalla).
+    -->
+    <title>Aprendiendo HTML - Clase 5</title> <!-- Es recomendable que el título tenga como máximo 55 o 65 caracteres. Esto se debe a que tanto el título
+        como la descripción de la etiqueta meta name="description" son las que se muestran en el buscador de Google. Cuando la cantidad máxima de caracteres
+        recomendada se supera, eso provocará que los resultados de las búsquedas de Google que correspondan a la página, muestren incompletos el título y la descripción,
+        mostrando puntos suspensivos para indicar que hay más texto, pero que no cabe en el espacio que Google asigna
+        para mostrar la información de la página.
+        -->
+     <meta name="description" content="Página de ejemplo del curso de HTML."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+     
+
+    
+
+    <style> /* La etiqueta "styles" permite incluir CSS dentro de la misma página Web. */
+        h2{
+            color: #ff4500; /* El código hexadecimal está formado por letras de la A la F y por números del 0 al 9. */
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <h3 id="indice-temas">Temario del Curso</h3>
+    <ul>
+        <li><a href="index.html#formularios">Formularios</a></li>
+        
+        
+        
+        <!-- IMPORTANTE: para que al dar clic en un vínculo del índice, el desplazamiento no sea inmediato, sino que se vea un efecto de desplazamiento más
+        estilizado, se debe agregar en CSS lo siguiente:
+            html {
+               scroll-behavior: smooth;
+            }
+        
+        Esto logrará que al dar clic en un vínculo del índice, la pantalla se desplace gradualmente hacia la posición buscada y no de forma abrupta.
+        -->
+    </ul>
+
+    
+    <br>
+    <br>
+    
+    <hr>
+
+    <h2 id="formularios">Formularios</h2>
+    <h3>Elementos de Formulario</h3>
+
+    <!-- INPUT-->
+    <input type="text" placeholder="Ingrese su nombre" readonly>  <!-- Input de tipo "text": Permite el ingreso de texto. 
+    El atributo "placeholder" permite agregar una sombra de texto o texto informativo, el cual se mostrará dentro del input, para que el usuario
+    sepa qué tipo de dato necesita ingresar en el mencionado "input". -->
+
+    <!-- Atributos disponibles para todos los elementos del Formulario:
+            - readonly: el elemento será de "solo lectura" y no podrá ser modificado por el usuario. El usuario podrá dar clic en él, pero no podrá escribir. 
+            - required: el campo del formulario se convierte en obligatorio, por lo que no se podrá enviar el formulario hasta que dicho campo se rellene.
+            - disabled: el campo permanecerá desactivado, no se podrá utilizar. A diferencia del atributo "readonly", cuando un elemento se desactiva, 
+                       ni siquiera se puede dar clic en él. 
+            - autocomplete="off": impide que se muestre el autocompletado mientras se escribe en un campo. 
+            - pattern: permite trabajar con Expresiones Regulares, las cuales se ven en el lenguaje JavaScript. Cuando se define una expresión regular, 
+                       no se permitirá el envío del formulario, a menos que el control al que se le aplicó el atributo "pattern" contenga únicamente los caracteres
+                       permitidos según la expresión regular. 
+    -->
+    
+    <br>
+    <br>
+
+    <input type="checkbox"> <!-- Input de tipo "checkbox": Permite seleccionar o deseleccionar elementos. Puedo activar uno o varios "checkbox" simultáneamente. -->
+
+    <br>
+    <br>
+
+    <input type="radio"> <!-- Input de tipo "radio" (Radio Button): Permite seleccionar elementos; solo es posible seleccionar un "RadioButton" de un formulario a la vez. 
+    Para que se pueda selecionar solo un "RadioButton", es imprescindible que los "RadioButton" estén dentro de un mismo formulario. -->
+    
+    <br>
+    <br>
+
+    <input type="date"> <!-- Input de tipo "date": Agrega un control para seleccionar una fecha a partir de un calendario. -->
+    
+    <br>
+    <br>
+
+    <input type="time"> <!-- Permite seleccionar una hora determinada.-->
+
+    <br>
+    <br>
+
+    <input type="month" min="1920-01"> <!-- Permite elegir el mes de un año en específico. El atributo "min" permite seleccionar el valor 
+    mínimo de año y mes que puede elegir el usuario. -->
+
+    <br>
+    <br>
+
+    <input type="week" min="2022-W01" max="2022-W52"> <!-- Permite elegir el número de semana de un año en específico.
+    El atributo "min" permite elegir el año y el número de semana mínima que se permitirá seleccionar. El número de semana se debe indicar precedido de una "W".
+    El atributo "max" permite elegir el año y el número de semana máxima que se permitirá seleccionar. El número de semana se debe indicar precedido de una "W".
+    -->
+
+    <br>
+    <br>
+
+    <input type="datetime-local"> <!-- Permite seleccionar el día y la hora deseados en un mismo control. -->
+    
+    <br>
+    <br>
+
+    <input type="color"> <!-- Input de tipo "color": Permite elegir un color a través de un paleta de colores. -->
+
+    <br>
+    <br>
+
+    <input type="button" value="Botón"> <!-- Input de tipo "button": Se comporta como un botón. El atributo "value" se utiliza para a
+    indicar el texto que mostrará el botón. -->
+
+    <br>
+    <br>
+    
+    <input type="submit" > <!-- Input de tipo "submit": Sirve específicamente para realizar el envío de la información de un formulario hacia el 
+    servidor. También se le puede agregar el atributo "value" para indicar el texto que se mostrará en el botón, sin embargo, 
+    si no se le agrega el atributo "value", de manera predeterminada se mostrará en el botón el texto "Enviar" (el idioma en que se muestra dependerá
+    del sistema operativo). -->
+
+    <br>
+    <br>
+
+    <input type="reset">  <!-- Input de tipo "reset": si está dentro de un formulario, al dar clic en él limpia todos los "input" y controles de formulario,
+    es decir, vuelve todos los controles de formulario a su estado inicial, para que el usuario ingrese todos los datos nuevamente.
+    
+    Si no se le agrega el atributo "value", de manera predeterminada mostrará en el botón el texto "Restablecer" (el idioma que se muestra dependerá del sistema
+    operativo). -->
+        
+    <br>
+    <br>
+
+    <input type="file"> <!-- Input de tipo "file": permite agregar un archivo al Sitio Web, a través del explorador de archivos.
+    Este input solamente permite seleccionar UN ARCHIVO. Si deseo que un "Input file" permita la selección de varios archivos, se
+    debe agregar el comando "multiple". -->
+
+    <br>
+    <br>
+
+    <input type="hidden" name="idioma" value="es"> <!-- Input de tipo "hidden": este tipo permanecerá oculto, por lo que no será visible para el usuario. -->
+    <!-- Los input ocultos, sirve para agregar un resultado que será enviado cuando se envíe el formulario correspondiente. -->
+
+    <br>
+    <br>
+
+    <input type="email"> <!-- Input de tipo "email":permite agregar un correo electrónico-. Si se escribe un texto, cuyo formato
+    no corresponde al de un correo electrónico, al ubicar el puntero sobre el "input", se muestra un mensaje de error indicando que el texto
+    no tiene el formato de correo electrónico correcto. " -->
+    
+    <br>
+    <br>
+
+    <input type="number"> <!-- Input de tipo "number": solamente permite agregar números dentro del input. Si se accede a este input desde un dispositivo táctil,
+    el mismo solamente mostrará el teclado numérico. -->
+
+    <!-- El input "number" puede tener los siguientes atributos:
+        - max: El valor máximo que está permitido ingresar. 
+        - min: El valor mínimo que wse permite ingresar. 
+        - step: El intervalo en que cambiarán los números del input cuando se utilicen las flechas de arriba y abajo para cambiar su valor. 
+                Ej: 
+                    <input type="number" step="2"> 
+                El ejemplo anterior permitirá que al presionar las flechas de arriba o abajo, la cantidad numérica del input aumente o disminuya en un intervalo de 2 unidades.
+    -->
+
+    <br>
+    <br>
+
+    <input type="tel"> <!-- Input de tipo "tel": permite ingresar caracteres alfanuméricos dentro del input. Su característica principal es que
+                            si se accede a este input desde un dispositivo táctil, al dar "tap" en él, el mismo solamente mostrará el teclado numérico 
+                            y símbolos que pueden ser usados al marcar un número telefónico. 
+                        -->
+    
+    <br>
+    <br>
+
+    <input type="password"> <!-- Input de tipo "password": no muestra los caracteres escritos dentro de él, sino que, por seguridad, 
+    muestra nada más símbolos para evitar que alguna persona identifique cuál es la contraseña del usuario. -->
+
+    <br>
+    <br>
+
+    
+    
+
+    
+    <a href="index.html#indice-temas">☝️</a> <!-- El emoji se obtuvo de la página: https://emojipedia.org/ -->
+
+    
+    
+    <aside> - Contenido publicitario o Contenido Complementario del contenido principal. -</aside> <!--Publicidad de la página-->
+    <footer>Creada por: ______</footer> <!--Pie de página-->
+</body>
+</html>
