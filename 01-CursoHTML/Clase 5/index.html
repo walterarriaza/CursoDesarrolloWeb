@@ -189,10 +189,13 @@ enfocadas a un país en particular. -->
     <br>
     <br>
 
-    <input type="tel"> <!-- Input de tipo "tel": permite ingresar caracteres alfanuméricos dentro del input. Su característica principal es que
-                            si se accede a este input desde un dispositivo táctil, al dar "tap" en él, el mismo solamente mostrará el teclado numérico 
-                            y símbolos que pueden ser usados al marcar un número telefónico. 
-                        -->
+    <input type="tel" minlength="8" maxlength="8"> <!-- Input de tipo "tel": permite ingresar caracteres alfanuméricos dentro del input. Su característica principal es que
+                                                        si se accede a este input desde un dispositivo táctil, al dar "tap" en él, el mismo solamente mostrará el teclado numérico 
+                                                        y símbolos que pueden ser usados al marcar un número telefónico. 
+
+                                                        Los atributos "minlength" y "maxlength" permiten definir el número mínimo y máximo, respectivamente, de dígitos que serán
+                                                        permitidos que sean agregados por el usuario. En este casos solamente se podrán agregar 8 dígitos.  
+                                                    -->
     
     <br>
     <br>
@@ -203,7 +206,121 @@ enfocadas a un país en particular. -->
     <br>
     <br>
 
+    <input type="search"> <!-- Input de tipo "search": aparentemente es igual a un "Input text", pero cuando se comienza a escribir dentro de él, aparece en la parte derecha
+    del input un ícono en forma de "x", gracias al cual, al dar clic en él, elimina todo el texto ingresado en el input. -->
+
+    <br>
+    <br>
+
+    <textarea cols="50" rows="10"> </textarea>
+    <!-- La etiqueta "textarea" permite agregar una caja de comentarios texto dentro del sitio Web-
+    Utiliza los siguientes atributos:
+        - minlength: Cantidad de caracteres mínimos que aceptará. 
+        - maxlength. Cantidad de caracteres máxima que aceptará. 
+        - cols: Define el número de columnas que abarcará de ancho el "textarea".
+        - rows: Define el número de filas que abarcará la altura del "textarea".
+    -->
+
+    <br>
+    <br>
+
+    <select> <!-- Permite mostrar en el sitio Web un ComboBox, con una flecha desplegable. Este ejemplo de "select" solamente permitirá selecionar UNA OPCIÓN a la vez. 
+    El atributo "value", realmente no era necesario ser agregado en este caso, su verdadera utilidad es cuando se desea enviar la opción
+    del "select" seleccionada por el usuario. El contenido del atributo "value" será el valor que se enviará al servidor, cuando el usuario
+    selecciona una opción.
+        Ej: Si el usuario selecciona la opción "JS", el valor que se enviará será el contenido del atributo "value", es decir, el valor "js"
+-->
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JS</option>
+    </select> 
+
+    <br>
+    <br>
+
     
+
+    <!-- Atributo "readonly"(solo lectura). Permite seleccionar el input, pero no modificar el texto escrito dentro de él. -->
+    <input type="text" value="andreiarriaza" readonly>
+    
+    <br>
+    <br>
+
+    <!-- Atributo "disabled"(deshabilitado). Deshabilita totalmente el "Input", ni siquiera permite seleccionarlo. -->
+    <input type="text" value="andreiarriaza" disabled>
+
+    <br>
+    <br>
+
+    <!-- Atributo "placeholder". Permite agregar una sombra de texto o texto de ayuda, para indicarle al usuario qué información debe ingresar
+    en ese campo. -->
+    <input type="text" placeholder="Ingrese su nombre." autofocus> <!-- El atributo "autofocus" permite
+    que el input reciba el "foco" al momento de cargar el sitio Web, es decir, que el punto de inserción aparezca en dicho campo.
+    
+    IMPORTANTE: para que el autofucus se muestre correctamente, la URL del sitio Web debe haberse cargado en su forma original, por ejemplo,
+    desde esta dirección: 
+        http://127.0.0.1:5500/Clase%205/index.html
+    
+    Si antes se accedió desde el índice de temas del sitio Web(vínculos internos) a una sección interna del sitio Web, entonces el "id" del vínculo interno
+    bloqueará el "autofocus". 
+
+    Si se accede a la siguiente dirección, el "autofocus" no funcionará:
+        http://127.0.0.1:5500/Clase%205/index.html#formularios
+    -->
+
+    <br>
+    <br>
+
+    <h3>Ejemplo de Formulario</h3>
+    <h4>Formulario de Login</h4>
+
+    <form action="" method="POST" autocomplete="off"> <!-- El atributo "action" sirve para indicar hacia qué archivo se enviará la información del formulario
+    cuando se presione el botón "Submit()".
+
+    El atributo "method" sirve para indicar cuál será el método de envío de formulario: POST o GET.
+
+    El atributo autocomplete="off" evita que se muestre dentro de los controles de formulario el autocompletado mientras se escribe dentro de un campo. En este ejemplo
+    el atributo "autcomplete" se colocó dentro de la etiqueta "form" directamente, debido a lo cual afectará a todos los elementos del formulario, pero si se
+    desea aplicar solamente a un elemento en específico, se quitaría de la etiqueta "form" y se le colocaría precisamente al control de formulario deseado para
+    que únicamente afecte a dicho control específicamente. 
+    -->
+
+        <label for="usuario">Usuario: </label> <!-- La etiqueta "label" permite asociar una etiqueta(label) a un control del formulario en particular. En
+        este caso, esta etiqueta "label" se mostrará a la izquierda del input cuyo atributo "id" tiene asignado el texto "usuario". Para indicar
+        a qué input estará asociado un "label" se utiliza el atributo "for". -->
+        <input type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario" pattern="^[A-Za-z]+$" title="El campo solo acepta letras" required > 
+        <!-- El atributo "name" sirve para poder identificar a cada uno de los elementos del "Formulario", cuando éste sea
+        enviado a través del botón "Submit".
+        
+        - El atributo "required" no permitirá enviar el formulario a menos que este campo se complete, es decir, hace que un campo sea "obligatorio".
+        
+        - El atributo "pattern" implica el uso de Expresiones Regulares, las cuales se estudian dentro del lenguaje JavaScript. Dichas expresiones
+        solo permitirán que se envíe el formulario, si el valor ingresado en el input es el correcto; si se ingresa un valor en el input que no sea el permitido,
+        al enviar el formulario mostrará un aviso para indicar se debe ingresar el formato solicitado. En este caso, esta expresión regular pattern="^[A-Za-z]+$"
+        solo permitirá el envío del formulario si en el input se ingresan letras de la "a" a la "z" o de la "A" a la "Z".
+
+        El atributo "title" se agrega para que al colocar el puntero sobre el input, el usuario sepa que solamente puede ingresar
+        letras dentro de él, y también sirve para que si el valor ingresado en el input no cumple con los valores permitidos por el atributo
+        "pattern", en el mensaje de error que se muestra, se despliegue también el contenido del atributo "title". 
+        -->
+
+        <br>
+
+        <br>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" placeholder="Ingrese su password" required>
+        
+        <br>
+        <br>
+
+        <input type="submit">
+
+        
+
+        <input type="reset">
+    </form>
+
     
 
     
