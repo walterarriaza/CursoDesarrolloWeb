@@ -42,4 +42,4 @@ Diseñe un sitio Web que incluya un formulario con los siguientes campos:
   
 
 **A los campos que corresponde, debe agregarles una etiqueta que guíe al usuario para saber qué dato debe escribir en dicho campo. **
-**El foco lo debe recibir el primer elemento del formulario.++
+**El foco lo debe recibir el primer elemento del formulario.**
