@@ -14,4 +14,5 @@ En este curso se aborda el **Lenguaje de Marcas de Hipertexto**, también llamad
 - [**Clase3:** Tablas, Enlaces externos, Enlaces internos](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%203)
 - [**Clase4:** Audio y Video, iFrames](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%204)
 - [**Clase5:** Formularios](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%205)
+- [**Clase6:** Formularios 2](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/01-CursoHTML/Clase%206)
 
