@@ -1,0 +1,204 @@
+
+<!DOCTYPE html> <!-- Indica la versión de lenguaje de marcado HTML con la que se está trabajando. -->
+<html lang="es"> <!-- Se define el lenguaje que se utilizará en el Sitio Web. El agoritmo de Google utiliza esta
+información para realizar la indexación correcta del Sitio Web en los motores de búsqueda, provocando un impacto positivo en el CEO.
+Si se quisiera diseñar un sitio Web para un sitio Web con características (palabras, frases, modismos,etc. ) muy particualares de un país,
+se puede hacer más específico el lenguaje. Ej: lang="es-GT", donde además del código del lenguaje "es" se indica el dominio que representa
+a ese país. Para el caso de Guatemala, el dominio es "GT". Pero esto no es normalmente recomendable, salvo que se necesiten características específicas y
+enfocadas a un país en particular. -->
+
+
+<head>
+    <meta charset="UTF-8"> <!-- Conjunto de caracteres de la página Web(char set). Este es el conjunto de caracteres más completo. Permite
+    que los símbolos especiales como las "ñ", las dildes, diéresis, acento circunflejo, grave, etc., se muestre correctamente en el sitio Web. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- El "viewport" es la zona visible del navegador, es decir, el área donde se renderiza
+    el contenido del sitio Web dentro del navegador. Esta etiqueta le indica al navegador de qué manera se adaptará el contenido del sitio Web al tamaño
+    del dispositivo. 
+    
+    "width=device-width"   ->  Indica que el ancho del "viewport" será igual al ancho del dispositivo en el cual se abra el sitio Web.
+    "initial-scale=1.0"  ->  Indica a qué escala se abrirá el contenido, siempre se abrirá a la escala original "initial-scale=1.0".
+
+    Esta etiqueta permite que el sitio Web sea responsive(adaptable a diferentes tamaños de pantalla).
+    -->
+    <title>Aprendiendo HTML - Clase 6</title> <!-- Es recomendable que el título tenga como máximo 55 o 65 caracteres. Esto se debe a que tanto el título
+        como la descripción de la etiqueta meta name="description" son las que se muestran en el buscador de Google. Cuando la cantidad máxima de caracteres
+        recomendada se supera, eso provocará que los resultados de las búsquedas de Google que correspondan a la página, muestren incompletos el título y la descripción,
+        mostrando puntos suspensivos para indicar que hay más texto, pero que no cabe en el espacio que Google asigna
+        para mostrar la información de la página.
+        -->
+     <meta name="description" content="Página de ejemplo del curso de HTML."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+     
+    <!-- Etiqueta para agregar Favicon al sitio Web. -->
+    <link rel="icon" href="img/android-chrome-512x512.png"> 
+
+    
+
+    <style> /* La etiqueta "styles" permite incluir CSS dentro de la misma página Web. */
+        h2{
+            color: #ff4500; /* El código hexadecimal está formado por letras de la A la F y por números del 0 al 9. */
+        }
+    </style>
+
+    
+</head>
+
+<body>
+
+    <h4>Selects, Radios y Checkbox</h4>
+    <form>
+        <label for="idioma">Elige tu idioma: </label>
+        <select name="idioma" id="idioma" required>
+            <option value="" selected>Elilge una opción</option> <!-- El atributo "value" debe quedar vacío para esta primera opción, pues solo sirve
+            para indicarle al usuario que esto es un CheckBox y que debe elegir una opción de la lista. Como value="", cuando se envíe el formulario, esta
+            opción del "select" en específico no enviará ningún valor al servidor.
+            
+            El atributo "selected" permite indicar cuál es la opción que se mostrará seleccionada por defecto.
+            -->
+            
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="fr">Francés</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Portugués</option>
+            
+        </select>
+        
+        <br>
+        <br>
+
+        <fieldset> <!-- Permite organizar en grupos los campos de un formulario. -->
+            <legend>Elige tu lenguaje de programación favorito</legend> <!-- Esta etiqueta es opcional, y permite agregar una descripción
+            a la etiqueta "fieldset". -->
+            <input type="radio" name="lenguaje" id="radio-js" value="js"  required checked> <!-- Cuando se trabaja con un grupo de "RadioButtons", todos deben tener el mismo "name".
+            El atributo "value" es importante, porque es el valor que será enviado al servidor si se selecciona ese RadioButton. -->
+        
+            <!-- El atributo "checked" permite indicar cuál RadioButton aparecerá seleccionado por defecto. Solamente se puede agregar a un RadioButton
+            del mismo grupo. -->
+
+            <!-- El atributo "required", cuando se asigna a uno de los RadioButton del grupio, se encarga de verificar que antes de enviar el formulario
+            se seleccione por lo menos un RadioButton. Este atributo solo debe escribirse en el primer RadioButton del grupo, y automáticamente se aplicará al resto de RadioButton
+            que pertenezcan al mismo grupo. El atributo "required" hace obligatorio que se seleccione un RadioButton del grupo. -->
+            <label for="radio-js">JavaScript</label>
+
+            
+            <input type="radio" name="lenguaje" id="radio-py" value="py"> <!-- Cuando se trabaja con un grupo de "RadioButtons", todos deben tener el mismo "name".
+            El atributo "value" es importante, porque es el valor que será enviado al servidor si se selecciona ese RadioButton. -->
+            <label for="radio-py">Python</label>
+
+            
+            <input type="radio" name="lenguaje" id="radio-php" value="php"> <!-- Cuando se trabaja con un grupo de "RadioButtons", todos deben tener el mismo "name".
+            El atributo "value" es importante, porque es el valor que será enviado al servidor si se selecciona ese RadioButton. -->
+            <label for="radio-php">PHP</label>
+        </fieldset>
+        
+        <br>
+        <br>
+        
+        <fieldset>
+            <legend>Elige tus intereses</legend>
+            <!-- En el ejemplo de arriba, se indicó cómo es posible asociar una etiqueta "label" con una etiqueta "input", gracias a los atributos "for"
+            y "id", sin embargo, hay una segunda manera de asociar una etiqueta "input" con una etiqueta "label", sin necesidad de utiliar los atributos "for"
+            y "id", la cual se muestra a continuación. -->
+            <label>
+                <input type="checkbox" name="intereses" value="deportes" checked>   <!-- El atributo "checked" permite indicar cuál CheckButton aparecerá seleccionado por defecto. 
+                Solamente se puede agregar a un RadioButton del mismo grupo. -->
+                <!-- Si quiero que un CheckBox en particular sea obligatorio, debo agregar el atributo "required". A diferencia de los RadioButton, aquí se agrega
+                el atributo "required" específicamente al CheckBox que deseo que sea obligatorio, y esto afectará solamente a ese CheckBox particular. -->
+                Deportes
+            </label>
+
+            <label>
+                <input type="checkbox" name="intereses" value="finanzas">
+                Finanzas
+            </label>
+
+            <label>
+                <input type="checkbox" name="intereses" value="salud">
+                Salud
+            </label>
+
+            <label>
+                <input type="checkbox" name="intereses" value="politica">
+                Política
+            </label>
+
+            <label>
+                <input type="checkbox" name="intereses" value="musica">
+                Música
+            </label>
+            
+        </fieldset>
+        
+        <br>
+        <br>
+
+        <label>
+            <input type="checkbox" name="terminos" required>
+            ¿Aceptas los términos y condiciones del Sitio Web?
+        </label>
+
+
+        <br>
+        <br>
+
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+
+    <br>
+    <br>
+
+    
+
+    <h4>Formulario de Contacto</h4>
+    
+    <br>
+
+    <form action="" method="POST">
+        <input type="text" name="nombre" placeholder="Escriba su nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Este campo solo acepta letras y espacios en blanco." required> 
+        <!-- El atributo "pattern" permite incluir expresiones regulares que validen que el contenido ingresado
+        en un "Input" cumpla con el formato deseado.
+        
+        La expresión regular utilizada dentro del atributo "pattern", verifica lo siguiente:
+        El acento circunflejo(^) indica que no puede haber ningún caracter antes de la expresión regular, mientras que
+        el signo de dólar($) indica que no puede haber nada después de la expresión regular. Tanto el acento circunflejo(^) como el signo de dólar ($)
+        permiten que la expresión regular se busque en cada uno de los caracteres de la cadena de texto.
+        
+        Los corchetes [A-Za-zÑñÁáÉéÍíÓóÚúÜü\s] indican que solo se permitirá el ingreso de los siguientes valores:
+            - Letras de la A hasta la Z mayúsculas y minúsculas.
+            - La letra Ñ y ñ
+            - Las vocales tildadas mayúsculas y minúsculas.
+            - Las letras Ü y ü (con diéresis)
+            - Espacios en blanco: "\s" permite el ingreso de espacios en blanco
+            - El signo + indica que se va a realizar la verificación por cada caracter de la cadena de texto.
+        -->
+
+        <input type="email" name="correo" placeholder="Escribe tu correo" title="Formato de correo inválildo" required>
+        
+
+        <br>
+        <br>
+
+        <textarea name="comentarios" cols="30" rows="10" required></textarea>
+
+        <br>
+        <br>
+
+        <input type="submit">
+        
+
+    </form>
+
+    
+    
+
+    
+    
+    
+    
+    <aside> - Contenido publicitario o Contenido Complementario del contenido principal. -</aside> <!--Publicidad de la página-->
+    <footer>Creada por: ______</footer> <!--Pie de página-->
+</body>
+</html>
