@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo CSS - Clase 1</title>
+    <!-- Aplicar estilos CSS internamente (desde el interior del documento), utilizando la etiqueta <style> -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+            /*  IMPORTANTE: para que al dar clic en un vínculo del índice, el desplazamiento no sea inmediato, sino que se vea un efecto de desplazamiento más
+                estilizado, se debe agregar en CSS lo siguiente:
+                    html {
+                        scroll-behavior: smooth;
+                    }
+        
+                Esto logrará que al dar clic en un vínculo del índice, la pantalla se desplace gradualmente hacia la posición buscada y no de forma abrupta.
+            */
+        }
+       
+    </style>
+
+    <meta name="description" content="Página de ejemplo del curso de CSS."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+
+
+  
+
+    <!-- Aplicar estilos a través de una Hoja Externa de CSS (forma recomendada)-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <article id="temario-css"> <!-- Cuando se dé clic en el ícono de la flecha que se encuentra debajo de cada tema de esta página para volver al índice o Temario del Curso,
+    al "article" que tiene asignado el id "temario-css" se le aplicará un color de fondo "verde". El por qué sucede esto, se verá en el tema "Pseudoclases", cuando
+    se ejemplifique la pseudoclase ":target".
+    -->
+        <h1>Aprendiendo CSS - Clase 1</h1>
+        <!-- 
+            ¿Qué es CSS?
+            Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es un lenguaje de estilos utilizado para definir la presentación o diseño
+            de un documento HTML.
+        -->
+        <p><i style="font-weight: bold; color: #ffa500;">Cascading Style Sheets</i> - Hojas de Estilos en Cascada</p> <!-- Para aplicar estilos CSS "en línea", 
+        se utiliza el atributo "style". -->
+
+        <h2>Temario del Curso</h2>
+        <ul>
+            <li><a href="index.html#selectores-basicos">Selectores básicos</a></li>
+            
+        </ul>   
+    </article>
+    
+    
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <article id="selectores-basicos">
+        <h2>Selectores básicos</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, mollitia. Adipisci accusamus eaque enim? Ea expedita at 
+            laudantium reiciendis debitis, harum quidem dolor rem impedit similique blanditiis optio eaque quibusdam.
+        </p>
+
+        <p id="parrafo-dos">
+            
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci fugiat magni distinctio illo laborum quaerat 
+            earum aspernatur dicta ipsam consectetur rem alias autem numquam nemo repellat veritatis, fugit tenetur pariatur?
+        </p>
+
+        <p class="text-32 bg-skyblue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, nobis eaque quibusdam beatae doloribus quisquam 
+            officiis ea, pariatur placeat impedit dolore sapiente consequatur a ab, hic ut sequi reprehenderit labore!
+        </p>
+
+        <p class="text-20 bg-steelblue text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque libero facilis cupiditate asperiores porro, quam 
+            consequuntur illum, exercitationem consequatur autem inventore iusto! Nemo cumque adipisci architecto quaerat et itaque totam.
+        </p>
+
+        <p class="text-32 bg-steelblue text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur recusandae, debitis repudiandae a assumenda, 
+            sequi vitae exercitationem voluptatum inventore accusamus aliquid quam ullam sapiente deleniti itaque, asperiores nostrum nobis eaque!
+        </p>
+
+        <!-- Este vínculo servirá para volver al índice de temas, el cual se encuentra identificado con el "id" llamado "inicio". -->
+        <a href="index.html#temario-css">🔼</a> <!-- El emoji se obtuvo de la página: https://emojipedia.org/ -->
+    </article>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+
+</body>
+</html>

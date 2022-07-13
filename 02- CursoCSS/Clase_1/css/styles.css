@@ -1,0 +1,94 @@
+
+
+/* Una regla de CSS consta de dos partes: 
+    1. Selector(de elemento HTML, de id, de clase, etc.).
+    2. Bloque de declaraciones. Tiene la siguiente sintaxis:
+            {
+                atributo: valor;
+            }    
+        
+        Si el atributo tiene más de dos palabras se escribe cada palabras separada por guío medio:
+            {
+                atributo-de-mas-de-dos-palabras: valor;
+
+            }
+
+*/
+
+
+/* ----------------------------- Importar una hoja de estilos dentro de otra (no recomendado)----------------------------- */
+
+@import url("styles2.css");
+
+/* De esta manera se puede importar una hoja externa de CSS dentro de otra. Esta manera de hacerlo no es recomendable pues afecta
+el rendimiento del sitio Web, pues, hasta que se carga la hoja externa que se está importando, se seguirán leyendo las reglas de CSS de la hoja externa actual. 
+
+Es mala práctica importar una hoja externa dentro de otra hoja externa porque son "bloqueantes", es decir que continúa leyendo la actual hoja externa hasta que haya
+terminado de importar la otra hoja externa.
+
+Utilizar el @import no es recomendable únicamente cuando se importan Hojas Externas de CSS, en otros casos, sí se puede utilizar.
+*/
+
+h1 {
+  color: #9acd32; /* Color de fuente */
+  background-color: #000000; /* Color de fondo */
+}
+
+/* IMPORTANTE: aunque actualmente la versión de CSS es la 3. Los cambios de aquí en adelante no se evidenciarán en un cambio de versión, a la versión 4, o 5, etc. 
+Realmente lo que irá cambiando en CSS serán los distintos módulos de CSS. Por ejemplo, irá cambiando el módulo de "Transformaciones CSS", o el módulo de "Animaciones CSS",
+etc. */
+
+/* ------------------------------ Selectores Básicos ------------------------------ */
+/* 
+Selectores básicos:
+    1. Etiquetas: son elementos html.
+    2. Identificadores: se caracterizan por utilizar el atributo "id" en HTML, y en CSS se representa por medio del símbolo "#". 
+    3. Clases: se caracteriza por utilizar el atributo "class" en HTML, y en CSS se representa por medio del punto "."
+*/
+
+/* ---------- Selector de Elementos(etiquetas) HTML ---------- */
+
+p {
+  color: #191970;
+}
+
+/* ---------- Selector de id (identificador) ---------- */
+
+/* La utilización del "id" se considera como un Anti Patrón, es decir, una mala práctica. Esto debido a que un "id" debe ser único en el sitio Web. Es decir, 
+que no pueden haber dos "id" con el mismo nombre. Esto se considera una mala práctica, porque CSS está pensado 
+para crear estilos reutilizables, y siendo que el id es único, eso choca con la "reutilización". 
+
+Además, el Selector de "id" es el selector que más peso tiene en una hoja de estilos CSS, por lo que su utilización también afecta el tiempo de carga de 
+la hoja de estilos CSS.
+
+Los "id" son útiles en JavaScript, pero en CSS no se recomienda utilizarlos. 
+*/
+
+#parrafo-dos {
+  background-color: #87ceeb;
+}
+
+/* ---------- Selector de Clase ---------- */
+/* Las clases permiten reutilizar el código CSS, pues una misma clase puede ser aplicada a varios elementos HTML. */
+
+/* Sugerencia: ordenar las clases de forma alfabética. */
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-steelblue {
+  background-color: steelblue;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.text-white {
+  color: white;
+}
