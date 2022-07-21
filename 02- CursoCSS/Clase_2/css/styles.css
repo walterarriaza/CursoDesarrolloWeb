@@ -1,1 +1,146 @@
 
+/* ------------------------------ Selectores Avanzados ------------------------------ */
+
+/* ---------- Selector de hijos directos ---------- */
+
+.hijos-directos > li {
+    /* El símbolo "mayor que", se utiliza para indica que el elemento "li" es hijo directo del elemento que tiene asignada 
+  la clase "hijos-directos", que en este caso es el elemento "ul".  */
+    /* IMPORTANTE: como se está aplicando el color de fondo a los elementos "li", el color de fondo abarcará todo el ancho de la ventana, pues la etiqueta "li" es una 
+  etiqueta de bloque. */
+    background-color: #d8bfd8;
+  }
+  
+  /* ---------- Selector de hijos descendientes ---------- */
+  
+  .hijos-descendientes b {
+    /* A diferencia del Selector de Hijos Directos, el Selector de Hijos Descendientes solo utiliza un espacio entre el nombre
+  de la clase y el nombre del elemento al que se le asignará el estilo correspondiente. */
+    /* Como en esta ocasión, el color de fondo se está asignado únicamente a la etiqueta "b", y esta etiqueta es "inline", el color de fondo solamente
+  se aplicará al texto, y no a todo el ancho de la ventana.*/
+    background-color: #d8bfd8;
+  }
+  
+  /* ---------- Selector de hermanos (en general) ---------- */
+  
+  .hermanos-general ~ li {
+    /* Utiliza el símbolo "~" (virgulilla). El Selecto de Hermanos (en general), aplica el estilo indicado únicamente a los hermanos del elemento señalado.
+  En este caso, el elemento que tiene asignada la etiqueta "hermanos-general" es la etiqueta "li". Acá se está indicado que únicamente se aplicará
+  este estilo a los "li" que sean hermanos del "li" al cual se le asignó la clase "hermanos-general".
+  
+  En el ejemplo, la clase "hermanos-general" se asignó al "li" que corresponde a "verano". Y el color de fondo se aplicó a los "li" con el texto: otoño e invierno. 
+  Pero ¿por qué no se aplicó el color de fondo al "li" con el texto "primavera", el cual está antes del "li" que tiene el texto "verano", si también es su hermano?
+  
+  No se aplicó el color de fondo al "li" con el texto "primavera", porque el Selector de Hermanos, solamente se aplica para las etiquetas "hermanas" que se encuentren debajo de la
+  etiqueta que tiene asignada la clase correspondiente. En este caso, como el "li" con el texto "primavera", se encuentra antes del "li" al que se le aplicó la clase
+  "hermanos-general", no le será aplicado el color de fondo.
+  
+  Los selectores de hermanos van a aplicarse únicamente a los elementos que son hermanos y que estén por debajo del elemento de referencia.
+  
+  */
+    background-color: #d8bfd8;
+  }
+  
+  /* ---------- Selector de hermanos adyacentes ---------- */
+  
+  .hermanos-adyacentes + li {
+    /* El Selector de Hermanos Adyacentes utiliza el símbolo "+". Este selector solamente aplicará el estilo al elemento adyacente al elemento
+  al que se le asigna la clase "hermanos-adyacentes", el cual, es el elemento "li". En este caso, solo aparece con color de fondo el elemento "otoño", porque el "li" en el que
+  se encuentra la palabra "Otoño", es adyacente al "li" que contiene el texto "verano", al cual se le asignó la clase "hermanos-adyacentes". 
+  
+  La búsqueda de "hermanos adyacentes" solo se realizará para las etiqueta que se encuentre por debajo de la etiqueta "li" a la cual se le
+  asignó la clase "hermanos-adyacentes", por eso solamente se le aplicó el estilo al "li" con la palabra "otoño". 
+  */
+    background-color: #d8bfd8;
+  }
+  
+  /* ---------- Selector de atributos ---------- */
+  
+  .selectores-atributos a[href] {
+    /* Los Selectores de Atributos permiten aplicar un estilo únicamente a las etiquetas que tienen un atributo en particular, el cual se
+  indica dentro de los corchetes. En este caso, el estilo se aplicará a las etiquetas "a" que tengan el atributo "href".
+  
+  En este ejemplo, todos los elementos de la lista que tienen el atributo "href" serán afectados por este estilo.
+  */
+  
+    color: #ff4500;
+  }
+  
+  /* Aplicar un Selector de Atributo únicamente a las etiquetas que tengan un atributo con un valor específico */
+  .selectores-atributos a[target="_blank"] {
+    /* Se aplicará el estilo solamente a las etiquetas "a" en las que el atributo target="_blank".
+  
+  Para este ejemplo, al último vínculo de la lista no se le aplicará el estilo, porque no tiene el atributo target="_blank".  */
+  
+    font-weight: bold;
+  }
+  
+  /* Aplicar un Selector de Atributo únicamente a las etiquetas que tengan un atributo que contenga cierto texto.*/
+  /* El comodín "*" aplica el estilo solamente si el atributo contiene el texto en cuestión en cualquier parte. */
+  .selectores-atributos a[href*="prensa"] {
+    /* En este caso, el estilo se aplicará solamente a las etiquetas "a" que tengan el atributo "href", el cual 
+  debe contener en algún lugar la palabra "prensa".
+  
+  En este ejemplo, al último vínculo de la lista no se le aplicará este estilo, porque dicho vínculo no tiene el texto "prensa" dentro del atributo "href". */
+    font-size: 24px;
+  }
+  
+  /* El comodín "^" aplica el estilo únicamente si el atributo contiene el texto en cuestión al inicio. */
+  .selectores-atributos a[href^="http:"] {
+    /* Este estilo solamente se aplicará a las etiquetas "a", que tengan un atributo "href" que contenga al principio el texto "http:".
+  Para este ejemplo, solamente dos vínculos tienen al principio el texto "http:": el elemento de lista con el texto "deportes" 
+  y el elemento de lista con el texto "vida". 
+  Solamente a estos elementos de lista se le quitará el subrayado del vínculo, los demás, seguirán mostrando el subrayado. 
+  */
+    text-decoration: none;
+  }
+  
+  /* El comodín "$" aplica el estilo únicamente si el atributo contiene el texto en cuestión al final. */
+  .selectores-atributos a[href$=".com"] {
+    /* Este estilo solamente se aplicará a las etiquetas "a", que tengan un atributo "href" que contenga al final el texto ".com".
+      Para este ejemplo, solamente un vínculo tienen al principio el texto ".com": el elemento de lista con el texto "inicio". 
+      Solamente al primer vínculo se le aplicará este estilo. 
+      */
+    background-color: #000000;
+  }
+  
+  /* El símbolo "~" (virgulilla) aplica el estilo únicamente si el atributo contiene el texto en cuestión en una lista de clases separadas por espacios. Es decir, 
+  que este selector aplicará este estilo solamente si dentro del atributo class (el cual contiene varias clases separadas por espacios), existe la palabra "cursos".*/
+  .selectores-atributos a[class~="cursos"] {
+    /*  Para comenzar, se debe indentificar que dentro de la etiqueta "nav" a la que se le asignó la clase "selectores-atributos",
+  hay una etiqueta "a" que tiene asignada las clases en una "lista separada por espacios": "menu-item cursos button". La etiqueta "a" antes mencionada, es la segunda etiqueta "a" de la lista. 
+  
+  Este selector aplicará este estilo solamente si dentro del atributo class (el cual contiene varias clases separadas por espacios), existe la palabra "cursos".
+  
+  En este caso, solamente le aplicará el estilo al segundo vínculo de la lista (Ciudades), porque solamente allí hay una clase que tiene una lista de clases separadas por espacios
+  en blanco, dentro de la cual se encuentra la palabra "cursos".
+  */
+    background-color: #191970;
+  }
+  
+  /* El comodín "|" aplica el estilo únicamente si contiene el texto en cuestión en una lista separada por espacios y que después del texto en cuestión
+  haya un guión medio "-". */
+  .selectores-atributos a[class|="menu"] {
+    /*  Solamente se aplicará este estilo a las etiquetas que tengan dentro del atributo "class" una lista separada por espacios, 
+  dentro la cual se muestre el texto "menu" seguido por un guión medio; es decir, se buscará una clase con el texto: "menu-".
+  
+  Para este ejemplo, el estilo solo se aplica al elemento de lista con el texto "Ciudades" y al elemento de lista con el texto "Vida", pues son los unicos
+  que incluyen el texto "menu-" dentro del atributo "class". Nótese que aunque el elemento de lista "Economía", también tiene una clase llamada "menu", esta clase
+  no tiene a la par de la palabra "menú" el guión medio "-", por lo que al elemento de lista "Economía" no se le aplicará este estilo.
+      */
+    font-style: italic;
+  }
+  
+  /* ------------------------------ Selector Universal (*) ------------------------------ */
+  
+  /* Aplicar el Selector Universal a TODOS los elementos del sitio Web */
+  * {
+    /* EL selector universal se implementa por medio del "*". El estilo que se indique dentro de esta regla se aplicará a todas las etiquetas del sitio Web.*/
+    font-family: sans-serif; /* La tipografía "sans-serif" se encuentra disponible en cualquier sistema operativo, sea Windows, Mac o Linux. */
+  }
+  
+  /* Aplicar el Selector Universal solamente en el contexto indicado */
+  .selector-universal * {
+    /* Se asignará este estilo a TODOS los elementos que se encuentren dentro de la clase "selector-universal". */
+    font-size: 24px;
+  }
