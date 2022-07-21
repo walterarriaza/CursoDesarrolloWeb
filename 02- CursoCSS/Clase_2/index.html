@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo CSS - Clase 2</title>
+    <!-- Aplicar estilos CSS internamente (desde el interior del documento), utilizando la etiqueta <style> -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+            /*  IMPORTANTE: para que al dar clic en un vínculo del índice, el desplazamiento no sea inmediato, sino que se vea un efecto de desplazamiento más
+                estilizado, se debe agregar en CSS lo siguiente:
+                    html {
+                        scroll-behavior: smooth;
+                    }
+        
+                Esto logrará que al dar clic en un vínculo del índice, la pantalla se desplace gradualmente hacia la posición buscada y no de forma abrupta.
+            */
+        }
+        h1{
+            color: yellowgreen;
+        }
+    </style>
+
+    <meta name="description" content="Página de ejemplo del curso de CSS."/>  <!-- Se recomienda que la descripción tenga como máximo 165 caractres. -->
+
+
+  
+
+    <!-- Aplicar estilos a través de una Hoja Externa de CSS (forma recomendada)-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <article id="temario-css"> 
+        <h1>Aprendiendo CSS - Clase 2</h1>
+        <!-- 
+            ¿Qué es CSS?
+            Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es un lenguaje de estilos utilizado para definir la presentación o diseño
+            de un documento HTML.
+        -->
+        <p><i style="font-weight:bold; color: #ffa500;">Cascading Style Sheets</i> - Hojas de Estilos en Cascada</p> <!-- Para aplicar estilos CSS "en línea", 
+        se utiliza el atributo "style". -->
+
+        <h2>Temario del Curso</h2>
+        <ul>
+            <li><a href="index.html#selectores-avanzados">Selectores avanzados</a></li>
+            
+        </ul>   
+    </article>
+    
+    
+
+    <br>
+
+    <hr>
+
+    <br>
+    <article id="selectores-avanzados">
+        <h2>Selectores avanzados</h2>
+        <h3>Selectores de hijos</h3>
+        <h4>Selector de hijos directos</h4>
+            <ul class="hijos-directos"> <!-- La etiqueta "ul" es el elemento padre, y los hijos directos son las etiquetas "li". La etiqueta "b" es como la
+            etiqueta "nieta" de la etiqueta "ul". -->
+                <li><b>Primavera</b></li>
+                <li><b>Verano</b></li>
+                <li><b>Otoño</b></li>
+                <li><b>Invierno</b></li>
+            </ul>
+        <h4>Selector de hijos descendientes</h4>
+            <ul class="hijos-descendientes">
+                <li><b>Primavera</b></li>
+                <li><b>Verano</b></li>
+                <li><b>Otoño</b></li>
+                <li><b>Invierno</b></li>
+            </ul>
+        
+        <h3>Selectores de hermanos</h3>
+            <h4>Selector de hermanos (en general)</h4>
+                <ul>
+                    <li><b>Primavera</b></li>
+                    <li class="hermanos-general"><b>Verano</b></li>
+                    <li><b>Otoño</b></li>
+                    <li><b>Invierno</b></li>
+                </ul>
+            <h4>Selector de hermanos adyacente</h4>
+                <ul>
+                    <li><b>Primavera</b></li>
+                    <li class="hermanos-adyacentes"><b>Verano</b></li>
+                    <li><b>Otoño</b></li>
+                    <li><b>Invierno</b></li>
+                </ul>
+
+        <h3>Selectores de Atributos</h3>
+        <!-- Atajo EMMET para desplegar etiquetas y atributos:
+                nav>ul>li*6>a[target="_blank"]    En este caso, se agrega el atributo "target:blank" a cada etiqueta "a".
+        -->
+        
+        <nav class="selectores-atributos">
+            <ul>
+                <li><a href="https://www.prensalibre.com" target="_blank">Inicio</a></li>
+                <li><a href="https://www.prensalibre.com/ciudades/" class="menu-item cursos button" target="_blank">Ciudades</a></li>
+                <li><a href="http://www.prensalibre.com/deportes/" target="_blank">Deportes</a></li> <!-- Intencionalmente se asignó como protocolo únicamente: http -->
+                <li><a href="https://www.prensalibre.com/internacional/" target="_blank">Notas</a></li>
+                <li><a href="https://www.prensalibre.com/economia/" class="menu item ahora button" target="_blank">Economía</a></li> <!-- Intencionalmente se asignó como protocolo únicamente: http -->
+                <li><a href="http://www.prensalibre.com/vida/" class="menu-item notas button" target="_blank">Vida</a></li>
+                <li><a href="index.html#temario-css">Regresar al Temario</a></li> <!-- Este vínculo redirige a esta misma página
+                y se utiliza para ejemplificar la aplicación de los Selectores de Atributos. -->
+            </ul>
+        </nav>
+
+        
