@@ -1,7 +1,7 @@
 # Ejercicio
 Diseñe un sitio Web, en el cual se despliegue una tabla como la que se muestra a continuación, empleando selectores para asignar los colores respectivos:
 
-![Ejercicio Selectores CSS](https://github.com/walterarriaza/CursoDesarrolloWeb-main-/blob/main/02-%20CursoCSS/Clase_2/assets/ejercicio-selectores.png)
+![Ejercicio Selectores CSS](https://github.com/walterarriaza/CursoDesarrolloWeb/blob/main/02-%20CursoCSS/Clase_2/assets/ejercicio-selectores.png)
 
 # Tarea
 Cree un sitio Web que servirá como Manual de Referencia del lenguaje HTML. En el mismo debe incluir lo siguiente:
