@@ -15,6 +15,6 @@ Cree un sitio Web que servirá como Manual de Referencia del lenguaje HTML. En e
   - Por lo menos 5 selectores de clase.
   - Por lo menos 5 selectores de ID.
   - Incluya algunos de los selectores avanzados vistos en clase. 
-- Agregue FavIcon al sitio Web.
+- Agregue Favicon al sitio Web.
    
 
