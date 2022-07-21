@@ -9,6 +9,7 @@ En este curso se aborda el lenguaje **CSS**, también llamado **Hojas de Estilo 
 # Clases  
   
   - [**Clase 1:** Selectores básicos](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/02-%20CursoCSS/Clase_1)
+  - [**Clase 2:** Selectores avanzados](https://github.com/walterarriaza/CursoDesarrolloWeb/tree/main/02-%20CursoCSS/Clase_2)
 
 
 
